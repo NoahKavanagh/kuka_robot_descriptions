@@ -3,6 +3,7 @@
   <!-- Import urdf file  -->
   <xacro:include filename="$(find kuka_agilus_support)/urdf/kr4_r600_macro.xacro"/>
   <xacro:include filename="$(find kuka_agilus_support)/urdf/kr_agilus_ros2_control_macro.xacro"/>
+  <xacro:include filename="$(find ashpick_cell_description)/urdf/cell.urdf.xacro"/>
   <!-- Read additional arguments  -->
   <xacro:arg name="driver_version" default="rsi_only"/>
   <xacro:arg name="mode" default="hardware"/>
@@ -37,4 +38,5 @@
     <child link="$(arg prefix)base_link"/>
     <origin xyz="$(arg x) $(arg y) $(arg z)" rpy="$(arg roll) $(arg pitch) $(arg yaw)"/>
   </joint>
+  <xacro:ashpick_workcell parent="$(arg prefix)base_link"/>
 </robot>
