@@ -206,6 +206,11 @@ def launch_setup(context, *args, **kwargs):
         name="rviz2",
         output="log",
         arguments=["-d", rviz_config_file, "--ros-args", "--log-level", "error"],
+        additional_env={
+            "GTK_PATH": "",
+            "GTK_MODULES": "",
+            "GTK_EXE_PREFIX": "",
+        },
         parameters=[
             robot_description_kinematics,
         ],

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="kr4_r600">
-  <xacro:macro name="kuka_kr4_r600_robot" params="prefix package_name">
+  <xacro:macro name="kuka_kr4_r600_robot" params="prefix package_name base_collision:=true">
     <link name="${prefix}base"/>
     <link name="${prefix}base_link">
-      <collision>
-        <geometry>
-          <mesh filename="package://${package_name}/meshes/kr4_r600/collision/base_link.stl"/>
-        </geometry>
-        <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
-      </collision>
+      <xacro:if value="${base_collision}">
+        <collision>
+          <geometry>
+            <mesh filename="package://${package_name}/meshes/kr4_r600/collision/base_link.stl"/>
+          </geometry>
+          <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+        </collision>
+      </xacro:if>
       <inertial>
         <inertia ixx="0.01774610228117179" ixy="0.0" ixz="0.0" iyy="0.028906995427589975" iyz="0.0" izz="0.029332705372297367"/>
         <mass value="7.9199E0"/>
