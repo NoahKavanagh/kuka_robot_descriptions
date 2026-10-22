@@ -20,7 +20,7 @@
   <xacro:arg name="async_affinity" default="[]"/>
   <xacro:arg name="x" default="0"/>
   <xacro:arg name="y" default="0"/>
-  <xacro:arg name="z" default="0"/>
+  <xacro:arg name="z" default="0.868"/>
   <xacro:arg name="roll" default="0"/>
   <xacro:arg name="pitch" default="0"/>
   <xacro:arg name="yaw" default="0"/>

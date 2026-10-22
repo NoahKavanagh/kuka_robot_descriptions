@@ -9,9 +9,6 @@
   <xacro:include filename="kr_arm_macro.xacro"/>
   <xacro:kuka_kr_arm prefix="$(arg prefix)"/>
   <xacro:if value="${robot_name_value == 'kr4_r600'}">
-    <disable_collisions link1="ashpick_cell_table" link2="zed_camera_center" reason="Never"/>
-    <disable_collisions link1="ashpick_wall_left" link2="zed_camera_center" reason="Never"/>
-    <disable_collisions link1="ashpick_wall_right" link2="zed_camera_center" reason="Never"/>
-    <disable_collisions link1="ashpick_wall_back" link2="zed_camera_center" reason="Never"/>
+    <disable_collisions link1="cell_light_collision" link2="zed_camera_center" reason="Never"/>
   </xacro:if>
 </robot>

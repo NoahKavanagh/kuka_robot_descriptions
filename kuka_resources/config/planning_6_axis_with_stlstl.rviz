@@ -45,7 +45,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: base_link
+      Reference Frame: world
       Value: true
     - Alpha: 0.5
       Class: rviz_default_plugins/RobotModel
@@ -817,7 +817,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
